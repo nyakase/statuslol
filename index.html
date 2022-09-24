@@ -38,10 +38,10 @@
                     if(response.ok) {
                         let jsen = await response.json()
                         document.querySelector("#woot").innerHTML = `Hey, it actually worked!<br>View your status <a href="${jsen.response.url}">here</a>.`
-                        document.querySelector("#vukk").src = "/img/vukkdonaldsw.png"
+                        document.querySelector("#vukk").src = "img/vukkdonaldsw.png"
                     } else {
                         document.querySelector("#woot").innerHTML = "Failed to post.<br>You probably screwed up." 
-                        document.querySelector("#vukk").src = "/img/vukkdonaldsf.png"
+                        document.querySelector("#vukk").src = "img/vukkdonaldsf.png"
                     }
                 })
             }
@@ -49,9 +49,9 @@
     </head>
     <body>
         <h1>Ronald Vukkydonald's status maker</h1>
-        <img src="/img/vukkdonalds.png" id="vukk">
+        <img src="img/vukkdonalds.png" id="vukk">
         <div style="display: inline-block;" id="woot">
-            <a href="https://home.omg.lol/account#api-key">API key</a> <input id="apikey" type="password" placeholder="gfdgjfdgfjdghdfjghfd" onfocus="document.querySelector('#vukk').src = '/img/vukkdonaldsh.png'" onblur="document.querySelector('#vukk').src = '/img/vukkdonalds.png'"></input> <small>I don't store this shit. It's sent in your browser.</small><br>
+            <a href="https://home.omg.lol/account#api-key">API key</a> <input id="apikey" type="password" placeholder="gfdgjfdgfjdghdfjghfd" onfocus="document.querySelector('#vukk').src = 'img/vukkdonaldsh.png'" onblur="document.querySelector('#vukk').src = 'img/vukkdonalds.png'"></input> <small>I don't store this shit. It's sent in your browser.</small><br>
             Address <input id="address" placeholder="vukky"></input><br>
             Emoji <input placeholder="😂" readonly onfocus="picker.open()" onclick="picker.open()" id="emojfield"></input><br>
             Status <input id="status" placeholder="laughing at how bad this site looks rn"></input><br>
