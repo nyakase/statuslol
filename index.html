@@ -25,12 +25,12 @@
             })
 
             function doit() {
-                document.querySelector("#vukk").src = "img/vukkdonaldss.png"
-                document.querySelector("#woot").innerHTML = "*drumroll*";
                 let apikey = document.querySelector("#apikey").value;
                 let address = document.querySelector("#address").value;
                 let emoji = document.querySelector("#emojfield").value;
                 let status = document.querySelector("#status").value;
+                document.querySelector("#vukk").src = "img/vukkdonaldss.png"
+                document.querySelector("#woot").innerHTML = "*drumroll*";
                 fetch(`https://api.omg.lol/address/${address}/statuses`, {
                     method: "POST",
                     headers: {
