@@ -1,6 +1,11 @@
 <html>
     <head>
         <title>Ronald Vukkydonald's status maker</title>
+        <link rel="preload" as="image" href="vukkdonalds.png">
+        <link rel="preload" as="image" href="vukkdonaldsf.png">
+        <link rel="preload" as="image" href="vukkdonaldsh.png">
+        <link rel="preload" as="image" href="vukkdonaldss.png">
+        <link rel="preload" as="image" href="vukkdonaldsw.png">
         <script src="https://unpkg.com/picmo@latest/dist/umd/index.js"></script>
         <script src="https://unpkg.com/@picmo/popup-picker@5.7.0/dist/umd/index.js"></script>
         <script>
@@ -20,6 +25,8 @@
             })
 
             function doit() {
+                document.querySelector("#vukk").src = "img/vukkdonaldss.png"
+                document.querySelector("#woot").innerHTML = "*drumroll*";
                 let apikey = document.querySelector("#apikey").value;
                 let address = document.querySelector("#address").value;
                 let emoji = document.querySelector("#emojfield").value;
@@ -40,7 +47,7 @@
                         document.querySelector("#woot").innerHTML = `Hey, it actually worked!<br>View your status <a href="${jsen.response.url}">here</a>.`
                         document.querySelector("#vukk").src = "img/vukkdonaldsw.png"
                     } else {
-                        document.querySelector("#woot").innerHTML = "Failed to post.<br>You probably screwed up." 
+                        document.querySelector("#woot").innerHTML = "Oh no, that didn't work?!<br>Maybe you entered wrong information." 
                         document.querySelector("#vukk").src = "img/vukkdonaldsf.png"
                     }
                 })
@@ -51,7 +58,7 @@
         <h1>Ronald Vukkydonald's status maker</h1>
         <img src="img/vukkdonalds.png" id="vukk">
         <div style="display: inline-block;" id="woot">
-            API key <input id="apikey" type="password" placeholder="gfdgjfdgfjdghdfjghfd" onfocus="document.querySelector('#vukk').src = 'img/vukkdonaldsh.png'" onblur="document.querySelector('#vukk').src = 'img/vukkdonalds.png'"></input> <small><b>Get yours <a href="https://home.omg.lol/account#api-key">here</a>.</b> I <a href="https://github.com/Vukkyy/statuslol/blob/627819415592ac2bed5353cd45f131c47d57169f/index.html#L22">don't</a> store this shit. It's sent in your browser.</small><br>
+            API key <input id="apikey" type="password" placeholder="gfdgjfdgfjdghdfjghfd" onfocus="document.querySelector('#vukk').src = 'img/vukkdonaldsh.png'; document.querySelector('#vukk').title = 'Must... not... look!'" onblur="document.querySelector('#vukk').src = 'img/vukkdonalds.png'; document.querySelector('#vukk').title = ''"></input> <small><b>Get yours <a href="https://home.omg.lol/account#api-key">here</a>.</b> I <a href="https://github.com/Vukkyy/statuslol/blob/627819415592ac2bed5353cd45f131c47d57169f/index.html#L22">don't</a> store this shit. It's sent in your browser.</small><br>
             Address <input id="address" placeholder="vukky"></input><br>
             Emoji <input placeholder="😂" readonly onfocus="picker.open()" onclick="picker.open()" id="emojfield"></input><br>
             Status <input id="status" placeholder="laughing at how bad this site looks rn"></input><br>
