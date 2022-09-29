@@ -11,6 +11,12 @@
         <script>
             let picker;
             document.addEventListener("DOMContentLoaded", function() {
+                if(document.location.search != "?skip") {
+                    document.querySelector("#vukk").src = "img/vukkdonaldsf.png"
+                    document.querySelector("#vukk").title = "I guess I'll be sitting here forever..."
+                    document.querySelector("#woot").innerHTML = "Hey, this site is officially useless!<br>Status changing functionality is now in OMG.LOL.<br>Just go to <a href='https://home.omg.lol/dashboard'>your dashboard</a>, your addresses have a new Statuslog section.<br>Or you can keep using Ronald <a href='?skip'>here</a>."
+                }
+
                 let trigger = document.querySelector("#emojfield")
                 picker = picmoPopup.createPopup({
                 // picker options go here
